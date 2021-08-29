@@ -36,7 +36,7 @@ const MostRequestIteam: React.FC = () => {
   return (
     <div>
       <div className="header">
-        <p className="title">
+        <p className="title" style={{ fontSize: "14px" }}>
           <span style={{ color: "red", fontSize: "20px", fontWeight: "bold" }}>
             {items.receive[0]._id}{" "}
           </span>
