@@ -6,6 +6,8 @@ import { Layout, Menu, Row, Col, Card } from "antd";
 import { DesktopOutlined, PieChartOutlined } from "@ant-design/icons";
 import StatisticStatus from "../../components/StatisticStatus";
 import BarChart from "../../components/BarChart";
+import DonutChart from "../../components/DonutChart";
+
 import MostRequestItem from "../../components/MostRequestItem";
 import "./SideBar.css";
 
@@ -165,7 +167,7 @@ export const Dashboard: React.FC = () => {
               </Col>
               <Col span={8}>
                 <Card>
-                  {/* <TotalCompleteAndPending /> */}
+                  <DonutChart />
                   <br />
                 </Card>
               </Col>

@@ -12,13 +12,7 @@ const TodayRequest: React.FC<TodayRequestProps> = (props) => {
   const { todayPosts, type } = props;
   let totalReceivePost;
   let totalSendPost;
-  // totalReceivePost = todayPosts.todayRequest.filter(
-  //   (request) => request._id === "receive"
-  // );
 
-  // totalReceivePost = todayPosts.todayRequest.filter(
-  //   (request) => request._id === "send"
-  // );
   todayPosts.todayRequest.forEach((request) => {
     if (request._id === "receive") totalReceivePost = request.count;
     if (request._id === "send") totalSendPost = request.count;
