@@ -4,7 +4,7 @@ import "antd/dist/antd.css";
 import { Layout, Menu, Row, Col, Card } from "antd";
 
 import { DesktopOutlined, PieChartOutlined } from "@ant-design/icons";
-import StatisticStatus from "../../components/StatisticStatus";
+
 import BarChart from "../../components/BarChart";
 import Block from "../../components/Block";
 import BarChartOne from "../../components/BarChartOne";
@@ -12,8 +12,6 @@ import DonutChart from "../../components/DonutChart";
 
 import MostRequestItem from "../../components/MostRequestItem";
 import "./SideBar.css";
-
-import TodayRequest from "../../components/TodayRequest";
 
 const { Header, Content, Sider } = Layout;
 
