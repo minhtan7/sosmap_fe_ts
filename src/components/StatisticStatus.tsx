@@ -7,16 +7,53 @@ import {
 } from "@ant-design/icons";
 
 export type StatisticProps = {
-  value: number;
-  trend: string;
+  todayPosts: {
+    todaySend: number;
+    todayReceive: number;
+    yesterdaySend: number;
+    yesterdayReceive: number;
+  };
+  type: string;
 };
 
 const StatisticStatus: React.FC<StatisticProps> = (props) => {
-  const { value, trend } = props;
+  const { todayPosts, type } = props;
+  const {
+    todaySend,
+    todayReceive,
+    yesterdaySend,
+    yesterdayReceive,
+  } = todayPosts;
+
+  let percent: number = 1;
+  let trend: string = "equal";
+
+  if (type === "send") {
+    if (todaySend === yesterdaySend) {
+      trend = "equal";
+    } else if (todaySend > yesterdaySend) {
+      percent = todaySend / yesterdaySend - 1;
+      trend = "increase";
+    } else {
+      percent = 1 - todaySend / yesterdaySend;
+      trend = "decrease";
+    }
+  } else {
+    if (todayReceive === yesterdayReceive) {
+      trend = "equal";
+    } else if (todayReceive > yesterdayReceive) {
+      percent = todayReceive / yesterdayReceive - 1;
+      trend = "increase";
+    } else {
+      percent = 1 - todayReceive / yesterdayReceive;
+      trend = "decrease";
+    }
+  }
+
   return (
     <Statistic
       title={`${trend}`}
-      value={value * 100}
+      value={percent * 100}
       precision={2}
       valueStyle={
         trend === "increase"
