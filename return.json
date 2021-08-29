@@ -1,0 +1,42 @@
+{
+  "success": true,
+  "data": {
+    "todayRequest": [
+      {
+        "_id": null,
+        "count": 15
+      },
+      {
+        "_id": "send",
+        "count": 64
+      },
+      {
+        "_id": "direct_support",
+        "count": 205
+      },
+      {
+        "_id": "receive",
+        "count": 1149
+      }
+    ],
+    "yesterdayRequest": [
+      {
+        "_id": "direct_support",
+        "count": 187
+      },
+      {
+        "_id": null,
+        "count": 2
+      },
+      {
+        "_id": "send",
+        "count": 112
+      },
+      {
+        "_id": "receive",
+        "count": 1755
+      }
+    ]
+  },
+  "message": "Get today total posts successfully."
+}

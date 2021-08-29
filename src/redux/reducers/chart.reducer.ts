@@ -1,10 +1,8 @@
-import { Chart } from "../types";
-
 import { ActionTypes } from "./../actions/barChart.actions";
 import * as types from "../constants/barChart.constant";
 
 const initialState = {
-  itemChart: Chart,
+  itemChart: {},
   todayPosts: {},
 };
 
