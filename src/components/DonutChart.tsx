@@ -17,7 +17,7 @@ const DonutChart: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       let url = `${BE_API}/charts/donut`;
-      console.log(url);
+
       const res = await fetch(url);
       const data = await res.json();
       console.log(data);

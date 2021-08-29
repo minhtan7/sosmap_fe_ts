@@ -10,14 +10,13 @@ interface BarChart {
 
 const BarChart: React.FC = () => {
   const [items, setItems] = useState<BarChart>({
-    send: [{ _id: "gạo", count: 1 }],
-    receive: [{ _id: "gạo", count: 1 }],
+    send: [{ _id: "gạo", count: 0 }],
+    receive: [{ _id: "gạo", count: 0 }],
   });
 
   useEffect(() => {
     const fetchData = async () => {
       let url = `${BE_API}/charts/item`;
-      console.log(url);
       const res = await fetch(url);
       const data = await res.json();
       console.log(data);

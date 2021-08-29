@@ -17,7 +17,7 @@ const MostRequestIteam: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       let url = `${BE_API}/charts/item`;
-      console.log(url);
+
       const res = await fetch(url);
       const data = await res.json();
       console.log(data);

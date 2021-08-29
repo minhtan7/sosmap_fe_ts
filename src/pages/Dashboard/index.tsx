@@ -6,6 +6,7 @@ import { Layout, Menu, Row, Col, Card } from "antd";
 import { DesktopOutlined, PieChartOutlined } from "@ant-design/icons";
 import StatisticStatus from "../../components/StatisticStatus";
 import BarChart from "../../components/BarChart";
+import BarChartOne from "../../components/BarChartOne";
 import DonutChart from "../../components/DonutChart";
 
 import MostRequestItem from "../../components/MostRequestItem";
@@ -163,7 +164,9 @@ export const Dashboard: React.FC = () => {
           <div className="site-card-wrapper">
             <Row gutter={16}>
               <Col span={16}>
-                <Card>{/* <BarChart /> */}</Card>
+                <Card>
+                  <BarChartOne />
+                </Card>
               </Col>
               <Col span={8}>
                 <Card>
