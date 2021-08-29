@@ -5,8 +5,10 @@ import { Layout, Menu, Row, Col, Card } from "antd";
 
 import { DesktopOutlined, PieChartOutlined } from "@ant-design/icons";
 import StatisticStatus from "../../components/StatisticStatus";
+import BarChart from "../../components/BarChart";
+import MostRequestItem from "../../components/MostRequestItem";
 import "./SideBar.css";
-import TotalSend from "../../components/TotalSend";
+
 import TodayRequest from "../../components/TodayRequest";
 
 const { Header, Content, Sider } = Layout;
@@ -115,7 +117,7 @@ export const Dashboard: React.FC = () => {
                   bordered={false}
                   className="infoCard"
                 >
-                  <TodayRequest todayPosts={todayPosts} />
+                  <TodayRequest todayPosts={todayPosts} type={"receive"} />
                   {receivePercentage !== undefined ? (
                     <StatisticStatus
                       value={receivePercentage.percent}
@@ -132,7 +134,8 @@ export const Dashboard: React.FC = () => {
                   bordered={false}
                   className="infoCard"
                 >
-                  <TotalSend todayPosts={todayPosts} />
+                  <TodayRequest todayPosts={todayPosts} type={"send"} />
+
                   {sendPercentage !== undefined ? (
                     <StatisticStatus
                       value={sendPercentage.percent}
@@ -149,7 +152,7 @@ export const Dashboard: React.FC = () => {
                   bordered={false}
                   className="infoCard"
                 >
-                  {/* <MostRequestIteam /> */}
+                  <MostRequestItem />
                 </Card>
               </Col>
             </Row>
@@ -172,7 +175,9 @@ export const Dashboard: React.FC = () => {
           <div className="site-card-wrapper">
             <Row gutter={16}>
               <Col span={24}>
-                <Card>{/* <TinaTestBarChart /> */}</Card>
+                <Card>
+                  <BarChart />
+                </Card>
               </Col>
             </Row>
           </div>
