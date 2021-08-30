@@ -1,5 +1,9 @@
 # SOS map
 
+## Dashboard
+
+https://sos-dashboard.netlify.app/
+
 ## Backend link
 
 https://github.com/PatrickDrejerczak/hubbackend
