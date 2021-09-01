@@ -6,7 +6,8 @@ https://sos-dashboard.netlify.app/
 
 ## Backend link
 
-https://github.com/PatrickDrejerczak/hubbackend
+heroku: https://sosbe.herokuapp.com/
+git: https://github.com/PatrickDrejerczak/hubbackend
 
 ## Using endpoint
 
