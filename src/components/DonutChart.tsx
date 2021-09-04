@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Doughnut } from "react-chartjs-2";
+import { Pie } from "react-chartjs-2";
 
 const BE_API = process.env.REACT_APP_BACKEND_API;
 
@@ -58,7 +58,7 @@ const DonutChart: React.FC = () => {
         <h1 className="title">Pending vs. Complete Tickets</h1>
         <div className="links"></div>
       </div>
-      <Doughnut data={data} />
+      <Pie data={data} />
     </>
   );
 };

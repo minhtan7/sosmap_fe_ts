@@ -1,44 +1,57 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Bar } from "react-chartjs-2";
 
-const BE_API = process.env.REACT_APP_BACKEND_API;
-
-interface Bar {
-  receive: [number];
-  send: [number];
+interface BarProps {
+  data: { receive: [number]; send: [number]; finish: [number] };
 }
 
-const BarChartOne = () => {
-  const [total, setTotal] = useState<Bar>({
-    receive: [1],
-    send: [1],
-  });
+const BarChartOne: React.FC<BarProps> = (props) => {
+  // const [total, setTotal] = useState<Bar>({
+  //   receive: [1],
+  //   send: [1],
+  //   finish: [1],
+  // });
+  // const [week, setWeek] = useState(4);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      let url = `${BE_API}/charts/bar`;
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     let url = `${BE_API}/charts/bar/${week}`;
 
-      const res = await fetch(url);
-      const data = await res.json();
-      console.log(data);
-      setTotal(data.data);
-    };
-    fetchData();
-  }, []);
-  console.log(total);
+  //     const res = await fetch(url);
+  //     const data = await res.json();
+  //     console.log(data);
+  //     setTotal(data.data);
+  //   };
+  //   fetchData();
+  // }, []);
+  // console.log(total);
+  let week = 4;
+  let labels = [];
+  for (let i = 0; i < week; i++) {
+    if (i === week - 1) {
+      labels.push("Latest");
+    } else {
+      labels.push(`${week - i} weeks ago`);
+    }
+  }
+  console.log(labels);
   const data = {
-    labels: ["Three weeks ago", "Two weeks ago", "One weeks ago", "Latest"],
-
+    labels: labels,
     datasets: [
       {
         backgroundColor: `rgba(220, 99, 135, 0.2)`,
-        data: total.receive,
+        data: props.data.receive,
         label: "Total Receive",
       },
       {
         backgroundColor: `rgba(255, 99, 132, 1)`,
-        data: total.send,
+        data: props.data.send,
         label: "Total Send",
+      },
+      {
+        backgroundColor: `rgba(255, 139, 150, 1)`,
+        data: props.data.finish,
+        label: "Total Finish",
       },
     ],
   };

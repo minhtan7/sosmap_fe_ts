@@ -1,0 +1,28 @@
+[
+  {
+    "province": {
+      "name": "Thành phố Hồ Chí Minh",
+      "slug": "HOCHIMINH",
+      "totalTicket": 10000
+    },
+    "districts": [
+      { "name": "Quận 1", "slug": "quan-1", "totalTicket": 2000 },
+      { "name": "Quận 2", "slug": "quan-2", "totalTicket": 30000 }
+    ]
+  },
+  {
+    "province": {
+      "name": "Thành phố Hồ Chí Minh",
+      "slug": "PieProps",
+      "totalTicket": 5000
+    },
+    "districts": [
+      {
+        "name": "Huyện Thanh Trì",
+        "slug": "huyen-thanh-tri",
+        "totalTicket": 1000
+      },
+      { "name": "Huyện Ứng Hoà", "slug": "huyen-ung-hoa", "totalTicket": 5000 }
+    ]
+  }
+]
