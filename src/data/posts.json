@@ -1,0 +1,44 @@
+[
+  {
+    "_id": "60ef915fb0b4de008eeec846",
+    "address": "91 Lê Hồng Phong, Phường 2, Quận 5, Thành phố Hồ Chí Minh, Việt Nam",
+    "type": "send",
+    "phoneNumber": "0988717185",
+    "items": [
+      {
+        "_id": "6109fdcd08003673b7ce1767",
+        "kind": "ComponentItemsSelectItems",
+        "ref": "6109d08508003673b7ce1301"
+      }
+    ],
+    "isApproved": true,
+    "isFinished": true,
+    "note": "testing",
+    "name": "Kpa Bảo Trân",
+    "loc": {
+      "type": "Point",
+      "coordinates": [106.67842581318006, 10.756781670679928]
+    }
+  },
+  {
+    "_id": "610c19078969f151c6514b2a",
+    "address": "431/8 Phan Văn Trị, Phường 7, Quận 5, Thành phố Hồ Chí Minh, Việt Nam",
+    "type": "send",
+    "phoneNumber": "0396531096",
+    "items": [
+      {
+        "_id": "6109fdcd08003673b7ce1767",
+        "kind": "ComponentItemsSelectItems",
+        "ref": "6109d08508003673b7ce1301"
+      }
+    ],
+    "isApproved": true,
+    "isFinished": true,
+    "note": "testing",
+    "name": "Trần Ngọc Thiện",
+    "loc": {
+      "type": "Point",
+      "coordinates": [106.6760058, 10.7548027]
+    }
+  }
+]
